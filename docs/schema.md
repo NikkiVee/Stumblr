@@ -8,6 +8,7 @@
 ### Posts
 * `id`
 * `user_id`
+* `type`
 * `url/text` (type: videos, photos, gifs, text input)
 * `caption`
 * `notes`
