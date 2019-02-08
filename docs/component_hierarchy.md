@@ -5,6 +5,11 @@
 * UserSearchBar
 * LogInForm
 
+**AuthFormContainer**
+* NavBar
+* UserSearchBar
+* LogInForm
+
 **UserIndex**
 * NavBar
 * UserSearchBar
@@ -22,5 +27,6 @@
 | **Path**  | **Component** |
 | ------------- | ------------- |
 | '/'  | 'Homepage'  |
+| '/login'  | 'AuthFormContainer'  |
 | '/dashboard'  | 'UserIndex'  |
 | '/:userId'  | 'UserDetailContainer'  |
