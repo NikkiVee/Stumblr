@@ -50,3 +50,5 @@
 * `Hashtags`
 * `Notes`
 * `Repost`
+
+can you briefly explain how i can set this up
