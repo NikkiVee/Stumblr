@@ -8,15 +8,15 @@
 
 My personal project is a full stack web application replica of Tumblr. I have built this using React and Express. I plan on giving it a similar functionality to the current version. That includes:
 
-* **User able to view posts**
-* **User able to create posts**
-* **User able to edit posts**
-* **User able to delete posts**
-* **User able to comment on posts**
-* **User able to edit comment on posts**
-* **User able to delete comment on posts**
-* **User able to like posts**
-* **User able to remove like on posts**
+* `User able to view posts`
+* `User able to create posts`
+* `User able to edit posts`
+* `User able to delete posts`
+* `User able to comment on posts`
+* `User able to edit comment on posts`
+* `User able to delete comment on posts`
+* `User able to like posts`
+* `User able to remove like on posts`
 
 ### Bonus
 * `Repost`
