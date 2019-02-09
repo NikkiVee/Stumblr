@@ -9,7 +9,7 @@
 * `id`
 * `user_id`
 * `type`
-* `url/text` (type: videos, photos, gifs, text input)
+* `url/body` (type: videos, photos, gifs, text input)
 * `caption`
 * `notes`
 
@@ -21,7 +21,7 @@
 ### Comments
 * `id`
 * `user_id`
-* `comment_id`
+* `body`
 
 ### Followers
 * `id`
