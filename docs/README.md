@@ -1,5 +1,9 @@
 # Stumblr
 
+[Trello][trello]
+
+[trello]: https://trello.com/b/tw4vAGgo/stumblr
+
 # Minimum Viable Product
 
 My personal project is a full stack web application replica of Tumblr. I have built this using React and Express. I plan on giving it a similar functionality to the current version. That includes:
@@ -13,10 +17,13 @@ My personal project is a full stack web application replica of Tumblr. I have bu
 * **User able to delete comment on posts**
 * **User able to like posts**
 * **User able to remove like on posts**
-* Bonus: Notes
-* Bonus: Followers
-* Bonus: LogIn
-* Bonus: Customize Profile
+
+### Bonus
+* `Repost`
+* `Followers`
+* `Hashtags`
+* `Notes`
+* `Customize Profile`
 
 # Design Docs
 
@@ -52,8 +59,10 @@ My personal project is a full stack web application replica of Tumblr. I have bu
 
 
 ## Bonus Features (TBD)
+* Users will be able to repost user posts
 * User can Log In
-* Able to see the amount of notes for each post (likes, comments, re-posts).
 * User is able to follow other users.
+* User will be able to add hashtags to their post
+* Able to see the amount of notes for each post (likes, comments, re-posts).
 * User can block other users.
 * User is able to customize their profile
