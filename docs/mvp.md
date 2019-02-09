@@ -30,25 +30,25 @@ My personal project is a full stack web application replica of Tumblr. I have bu
 
 ## Phase 1: Setup Backend (2 days)
 * **Objective:**
-`Routes, queries and database`
+- `Routes, queries and database`
 ## Phase 2: Frontend: Homepage (4 days)
 * **Objective:**
-`Users can have a homepage`
-`Users will able to click “Get Started” button that leads to dashboard`
-`Homepage will be styled`
+- `Users can have a homepage`
+- `Users will able to click “Get Started” button that leads to dashboard`
+- `Homepage will be styled`
 ## Phase 3: Frontend: Dashboard (4 days)
 * **Objective:**
-`Users will be able to see other users posts displayed`
-`Users will be able to click and enlarge posts`
+- `Users will be able to see other users posts displayed`
+- `Users will be able to click and enlarge posts`
 ## Phase 4: Frontend: Dashboard Continued (5 days)
 * **Objective:**
-`Users will be able to click the search/dropdown bar (limited selection)`
-`Users will be able to USE search/dropdown and filter posts by selection`
-`Users will be able to like/comment on posts`
+- `Users will be able to click the search/dropdown bar (limited selection)`
+- `Users will be able to USE search/dropdown and filter posts by selection`
+- `Users will be able to like/comment on posts`
 ## Phase 5: Frontend: User Profiles (3 days)
 * **Objective:**
-`Users will be able to see their own profile`
-`Users will be able to add/edit/delete posts`
+- `Users will be able to see their own profile`
+- `Users will be able to add/edit/delete posts`
 
 
 ## Bonus Features (TBD)
