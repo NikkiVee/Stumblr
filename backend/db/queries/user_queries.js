@@ -1,49 +1,54 @@
 const { db } = require('./index.js');
 
 const getSingleUser = (req, res, next) => {
-  let userId = parseInt(req.params.id);
-  db.one('SELECT * FROM users WHERE id=$1', [userId])
-    .then(data => {
-      res.status(200)
-      .json({
-        status: ' success',
-        data: data,
-        message: 'Received ONE USER!',
-      });
-    })
-    .catch(err => {
-      return next(err);
+  db.one('SELECT * FROM users WHERE id=$1', [Number(req.params.id)])
+  .then(users => {
+    res.status(200).json({
+      status: 'success',
+      users: users,
+      message: 'Recieved ONE User!',
     });
+  })
+  .catch(err => next(err));
 };
 
 const createUser = (req, res, next) => {
-  db.none('INSERT INTO users (name, age) VALUES (${name}, ${age})', req.body)
+  db.none('INSERT INTO users (username, email) VALUES (${username}, ${email})', req.body)
   .then(() => {
-    res.status(200)
-    .json({
+    res.status(200).json({
       status: 'success',
-      message: 'Congrats new user',
+      message: 'Successfully Added New User!',
     });
   })
-  .catch(err => {
-    return next(err);
-  });
+  .catch(err => next(err));
 };
 
 const deleteUser = (req, res, next) => {
-  let userId = parseInt(req.params.id);
-  db.result('DELETE FROM users WHERE id=$1', userId)
-  .then(result => {
-    res.status(200)
-    .json({
+  db.none("DELETE FROM users WHERE id=$1",
+   [Number(req.params.id)])
+   .then(() => {
+     res.status(200).json({
+       status: "success",
+       message: "Successfully Deleted User"
+     })
+   })
+   catch(err => next(err))
+}
+
+const editUser = (req, res, next) => {
+  db.none('UPDATE users SET username=${username}, email=${email} WHERE id=${id}', {
+    id: parseInt(req.params.id),
+    username: req.body.username,
+    email: req.body.email,
+  })
+  .then(() => {
+    res.status(200).json({
       status: 'success',
-      message: 'You murdered a user soooo good',
-      result: result,
+      message: 'Successful User Edit!',
     });
   })
-  .catch(err => {
-    return next(err);
-  });
+  .catch(err => next(err));
 };
 
-module.exports = { getSingleUser, createUser, deleteUser };
+
+module.exports = { getSingleUser, createUser, deleteUser, editUser };
