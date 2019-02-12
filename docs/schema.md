@@ -8,24 +8,26 @@
 ### Posts
 * `id`
 * `user_id`
-* `type`
 * `url/body` (type: videos, photos, gifs, text input)
 * `caption`
 * `notes`
+* `hashtags`
 
 ### Likes
 * `id`
-* `user_id`
+* `liker_id`
 * `post_id`
 
 ### Comments
 * `id`
-* `user_id`
+* `commenter_id`
+* `post_id`
 * `body`
 
 ### Followers
 * `id`
 * `user_id`
+* `follower_id`
 
 ### Hashtags
 * `id`

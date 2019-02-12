@@ -42,7 +42,7 @@ My personal project is a full stack web application replica of Tumblr. I have bu
 * **Objective:**
 - `Users can have a homepage`
 - `Users will able to click “Get Started” button that leads to dashboard`
-- `Homepage will be styled`
+- `Style Homepage`
 ## Phase 3: Frontend: Dashboard (4 days)
 * **Objective:**
 - `Users will be able to see other users posts displayed`
@@ -52,10 +52,12 @@ My personal project is a full stack web application replica of Tumblr. I have bu
 - `Users will be able to click the search/dropdown bar (limited selection)`
 - `Users will be able to USE search/dropdown and filter posts by selection`
 - `Users will be able to like/comment on posts`
+- `Style Dashboard`
 ## Phase 5: Frontend: User Profiles (3 days)
 * **Objective:**
 - `Users will be able to see their own profile`
 - `Users will be able to add/edit/delete posts`
+- `Style User Profile`
 
 
 ## Bonus Features (TBD)
