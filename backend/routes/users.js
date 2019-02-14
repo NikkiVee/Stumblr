@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { getSingleUser, createUser, deleteUser, editUser } = require('../db/queries/users_queries.js');
+const { getSingleUser, createUser, deleteUser, editUser } = require('../db/queries/user_queries.js');
 
 router.get('/:id', getSingleUser);
 router.post('/', createUser);

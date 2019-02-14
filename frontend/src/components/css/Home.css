@@ -1,0 +1,32 @@
+.greeting1 {
+  margin: auto;
+  font-size: 29px;
+  font: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+}
+
+.greeting2 {
+  margin: auto;
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+.button {
+  height: 52px;
+  width: 315px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.wholething {
+  width: 100%;
+  height: 100%;
+}
+
+.greeting-container {
+  position: relative;
+  top: 50%;
+  padding-top: 110px;
+}
+
+/* min height */

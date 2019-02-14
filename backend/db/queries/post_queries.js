@@ -1,4 +1,4 @@
-const { db } = require('./index.js');
+const { db } = require('../index.js');
 
 const createPost = (req, res, next) => {
   db.none('INSERT INTO posts (user_id, type, body, url) VALUES (${user_id}, ${type}, ${body}, ${url})', req.body)
@@ -12,16 +12,16 @@ const createPost = (req, res, next) => {
 };
 
 const deletePost = (req, res, next) => {
-  db.none("DELETE FROM posts WHERE id=$1",
+  db.none('DELETE FROM posts WHERE id=$1',
    [Number(req.params.id)])
    .then(() => {
-     res.status(200).json({
-       status: "success",
-       message: "Successfully Deleted Post"
-     })
-   })
-   catch(err => next(err))
-}
+    res.status(200).json({
+      status: 'success',
+      message: 'Successfully Deleted Post',
+    });
+  })
+   .catch(err => next(err));
+};
 
 const editPost = (req, res, next) => {
   db.none('UPDATE posts SET user_id=${user_id}, type=${type}, body=${body}, url=${url} WHERE id=${id}', {
@@ -52,6 +52,4 @@ const getAllPosts = (req, res, next) => {
   .catch(err => next(err));
 };
 
-
-
-module.exports = { createPost, deletePost, updatePost, getAllPosts };
+module.exports = { createPost, deletePost, editPost, getAllPosts };

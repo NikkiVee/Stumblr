@@ -20,8 +20,6 @@
 ### Posts
 * `POST /api/post`
   * Add post
-* `GET /api/post/:id`
-  * Get single existing post
 * `GET /api/post/:userId`
   * Get all posts from one user
 * `GET /api/post/:userId/notes`
@@ -34,8 +32,10 @@
 ### Likes
 * `POST /like`
   * Adds like
-* `DELETE /like/:id`
+* `DELETE /posts/:id`
   * Deletes single like
+* `GET /posts/:id`
+  * Get all likes from one post
 
 ### Comments
 * `POST /comments`

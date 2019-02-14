@@ -1,0 +1,32 @@
+.logo {
+  width: 34px;
+  height: 34px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 8px;
+  margin-top: 10px
+}
+
+.search_query {
+  color: hsla(0,0%,100%,.6);
+  padding-right: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 39px;
+  background: rgba(0,0,0,.13);
+  font-weight: 400;
+  line-height: inherit;
+  font-size: 15px;
+  height: 20px;
+  width: 34%;
+  border: 0;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.navbar {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
