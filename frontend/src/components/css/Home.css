@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" rel="stylesheet');
+
+
 .greeting1 {
   margin: auto;
   font-size: 29px;
-  font: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  font-family: 'PT Serif', serif;
+  color: white
 }
 
 .greeting2 {
   margin: auto;
   font-size: 13px;
-  padding-top: 10px;
+  color: white;
 }
 
 .button {
@@ -16,17 +20,24 @@
   font-size: 15px;
   font-weight: bold;
   border-radius: 4px;
-}
-
-.wholething {
-  width: 100%;
-  height: 100%;
+  border: 2px solid #00b8ff;
+  color: white;
+  background-color: #00b8ff;
 }
 
 .greeting-container {
   position: relative;
   top: 50%;
-  padding-top: 110px;
+  padding-top: 214px;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-image: url("../background_img/2.jpg");
 }
 
 /* min height */

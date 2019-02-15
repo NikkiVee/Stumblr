@@ -1,16 +1,13 @@
 import React from 'react';
-import axios from 'axios';
 import './css/Home.css';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component{
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
 
   render() {
     return (
+      <div className="background">
+
       <div className="wholething">
 
       <div className="greeting-container">
@@ -21,7 +18,9 @@ class Home extends React.Component{
         <p>Come for what you love.</p>
         <p>Stay for what you discover.</p>
       </div>
-      <button class="button">Get Started</button>
+      <Link to="/dashboard"><button className="button">Get Started</button></Link>
+      </div>
+
       </div>
 
       </div>

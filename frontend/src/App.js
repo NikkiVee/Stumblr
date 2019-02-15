@@ -3,7 +3,7 @@ import './App.css';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Home from './components/Home';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard/Dashboard.js';
 import Profile from './components/Profile';
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
 
         <Switch>
 
-          <Route path="/" component={Home}/>
+          <Route exact path="/" component={Home}/>
           <Route path="/dashboard" component={Dashboard}/>
           <Route path="/profile" component={Profile}/>
         </Switch>

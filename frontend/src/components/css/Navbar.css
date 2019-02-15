@@ -8,21 +8,28 @@
 }
 
 .search_query {
-  color: hsla(0,0%,100%,.6);
   padding-right: 10px;
-  padding-top: 9px;
-  padding-bottom: 9px;
   padding-left: 39px;
   background: rgba(0,0,0,.13);
   font-weight: 400;
   line-height: inherit;
   font-size: 15px;
-  height: 20px;
+  height: 31px;
   width: 34%;
-  border: 0;
+  border: 2px white;
   border-radius: 3px;
   margin-top: 10px;
+  opacity: Black 10%;
+  color: white
 }
+
+input:focus {
+  background-color: white;
+  color: white;
+  border: white;
+  outline: none;
+}
+
 
 .navbar {
   margin-top: 0px;
