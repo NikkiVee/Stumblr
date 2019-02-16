@@ -10,7 +10,6 @@ export const PostList = (props) => {
       <div>
       {postList}
       </div>
-
     </>
   )
 }

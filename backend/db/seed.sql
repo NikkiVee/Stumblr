@@ -36,11 +36,11 @@ CREATE TABLE comments (
 );
 
 INSERT INTO users (username, email, pic_url, title, description)
-VALUES ('nikkivee','beyoncefan4eva@gmail.com', 'https://ca.slack-edge.com/TCVA3PF24-UD56A6QQ7-5e6e8de080a4-1024', 'all photos by NikkiVee', 'Jackson Heights, Queens'), ('earellano','earellano@gmail.com', 'https://ca.slack-edge.com/TCVA3PF24-UD7N25LKY-7ed461a18d30-1024', 'just a small town boy', 'Bronx, New York'), ('jonielovesme','jonielovesme@gmail.com', 'https://ca.slack-edge.com/TCVA3PF24-UD58TDVAT-720189825626-1024', 'i have secrets', 'South Ozone, Queens');
+VALUES ('nikkivee','beyoncefan4eva@gmail.com', 'https://66.media.tumblr.com/avatar_84bb5b431416_128.pnj', 'all photos by NikkiVee', 'Jackson Heights, Queens'), ('earellano','earellano@gmail.com', 'https://66.media.tumblr.com/avatar_0f2ad096183a_128.pnj', 'just a small town boy', 'Bronx, New York'), ('jonielovesme','jonielovesme@gmail.com', 'https://66.media.tumblr.com/avatar_fec957214542_128.pnj', 'i have secrets', 'South Ozone, Queens');
 
 INSERT INTO posts (user_id, type, body, url)
-VALUES (1, 'text', 'babys first post', 'https://i0.wp.com/www.chiefjosephdays.org/rodeo/wp-content/uploads/2012/03/Brian-Potter-Rodeo-Clown.jpg'),
-(2, 'gif', null, 'https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif'), (3, 'img', null, 'https://litreactor.com/sites/default/files/imagecache/header/images/column/headers/jerk-shakespeare.jpg');
+VALUES (1, 'text', 'Pixel Forest, February 2017', 'https://66.media.tumblr.com/9c2f84125c159a8c162fbe69b090d473/tumblr_oqhl1ttlmg1uhcdwzo1_1280.jpg'),
+(2, 'gif', null, 'https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif'), (3, 'img', null, 'https://66.media.tumblr.com/9cc7b4d1bff0059642770befd2f6f3cb/tumblr_n6bmtzxVzS1rhay20o1_1280.png');
 
 INSERT INTO likes (liker_id, post_id)
 VALUES (1, 1), (2, 2), (3, 3);

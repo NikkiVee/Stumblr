@@ -2,44 +2,34 @@ import React from 'react';
 import '../css/Dashboard.css';
 import axios from 'axios'
 
-import { PostList } from './PostList'
-import { UserList } from './UserList'
+import { DashboardList } from './DashboardList'
+
 
 class Dashboard extends React.Component{
   constructor(){
     super()
     this.state = {
-      posts: [],
-      users: []
+      allInfo: []
     }
   }
 
   componentDidMount() {
-      this.getPosts();
-      this.getUsers();
+      this.getDashboardInfo();
     }
 
-  getPosts = () => {
-    axios.get('/posts')
+  getDashboardInfo = () => {
+    axios.get('/posts/dashboardInfo')
     .then(res => {
-      this.setState({ posts: res.data.posts });
-    });
-  }
-
-  getUsers = () => {
-    axios.get('/users')
-    .then(res => {
-      this.setState({ users: res.data.users });
-    });
+      this.setState({ allInfo: res.data.data})
+    })
   }
 
   render() {
     return (
       <>
-      <PostList posts={this.state.posts}/>
-      <UserList users={this.state.users}/>
+      <DashboardList allInfo={this.state.allInfo}/>
       </>
-    );
+    )
   }
 }
 

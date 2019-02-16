@@ -53,7 +53,7 @@ const getAllPosts = (req, res, next) => {
 };
 
 const dashboardInfo = (req, res, next) => {
-  db.any('SELECT body, username, user_id, type, pic_url FROM posts JOIN users ON posts.user_id = users.id')
+  db.any('SELECT body, username, user_id, url, type, pic_url FROM posts JOIN users ON posts.user_id = users.id')
   .then(data => {
     res.status(200).json({
       status: 'success',

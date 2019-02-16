@@ -14,6 +14,12 @@
   color: white;
 }
 
+p {
+  font-weight: 500px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .button {
   height: 52px;
   width: 315px;

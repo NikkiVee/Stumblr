@@ -1,3 +1,55 @@
-/* body {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" rel="stylesheet');
+
+body {
   background-color: #051933;
-} */
+}
+
+li {
+  list-style: none;
+}
+
+.profilePic {
+  height: 75px;
+  width: 75px;
+  border-radius: 3px;
+}
+
+.usernameCont {
+  display: flex;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.username {
+  width: 540px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 3px 3px 0px 0px;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 17px;
+  padding-top: 17px;
+}
+
+.post {
+  width: 540px;
+  height: 421px;
+}
+
+.bodyCont {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  height: 10px
+}
+
+.body {
+  background: #FFFFFF;
+  width: 540px;
+  height: 31px;
+  border-radius: 0px 0px 3px 3px ;
+}
