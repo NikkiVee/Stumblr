@@ -8,6 +8,7 @@ export const Navbar = () => {
   return(
     <>
       <nav className="navbar">
+      
         <NavLink to={"/"} className="navlink">s</NavLink>
 
         <input type="text" name="search" placeholder="Search Stumblr" value="" className="search_query"/>

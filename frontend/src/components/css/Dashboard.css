@@ -45,6 +45,9 @@ li {
   border-radius: 3px 3px 0px 0px;
   font-family: 'Open Sans', sans-serif;
   background: #FFFFFF;
+  display: flex;
+  padding-left: 18px;
+  padding-bottom: 8px;
 }
 
 .postCont {
@@ -70,6 +73,9 @@ li {
   font-family: 'Open Sans', sans-serif;
   background: #FFFFFF;
   border-radius: 0px 0px 3px 3px;
+  display: flex;
+  padding-top: 16px;
+  padding-left: 18px;
 }
 
 .likes {
