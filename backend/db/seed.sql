@@ -40,7 +40,7 @@ VALUES ('nikkivee','beyoncefan4eva@gmail.com', 'https://66.media.tumblr.com/avat
 
 INSERT INTO posts (user_id, type, body, url)
 VALUES (1, 'text', 'Pixel Forest, February 2017', 'https://66.media.tumblr.com/9c2f84125c159a8c162fbe69b090d473/tumblr_oqhl1ttlmg1uhcdwzo1_1280.jpg'),
-(2, 'gif', null, 'https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif'), (3, 'img', null, 'https://66.media.tumblr.com/9cc7b4d1bff0059642770befd2f6f3cb/tumblr_n6bmtzxVzS1rhay20o1_1280.png');
+(2, 'gif', '"Terrorize my heart"', 'https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif'), (3, 'img', null, 'https://66.media.tumblr.com/9cc7b4d1bff0059642770befd2f6f3cb/tumblr_n6bmtzxVzS1rhay20o1_1280.png');
 
 INSERT INTO likes (liker_id, post_id)
 VALUES (1, 1), (2, 2), (3, 3);

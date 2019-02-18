@@ -10,13 +10,14 @@ li {
 
 .wholeDashboard {
   display: grid;
-  grid-template-columns: 8% 75%;
-  grid-auto-rows: 6% 2% 82% 10%;
+  grid-template-columns: 9% 75% 13%;
+  grid-auto-rows: 9% 82% 10%;
   margin: auto;
   width: 726px;
   height: auto;
   grid-column-gap: 23px;
   padding-top: 33px;
+  padding-right: 230px;
 }
 
 .profilePicCont {
@@ -47,12 +48,12 @@ li {
   background: #FFFFFF;
   display: flex;
   padding-left: 18px;
-  padding-bottom: 8px;
+  padding-bottom: 70px;
 }
 
 .postCont {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 .actualPost {
@@ -62,11 +63,12 @@ li {
 
 .bodyCont {
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 3;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   height: 100%;
   background-color: white;
+  border-radius: 0px 0px 3px 3px;
 }
 
 .body {
@@ -76,6 +78,7 @@ li {
   display: flex;
   padding-top: 16px;
   padding-left: 18px;
+  height: 1px;
 }
 
 .likes {
