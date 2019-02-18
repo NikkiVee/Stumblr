@@ -1,16 +1,9 @@
-.logo {
-  width: 34px;
-  height: 34px;
-  padding-top: 5px;
-  padding-left: 20px;
-  padding-right: 8px;
-  margin-top: 10px
-}
+@import url('https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" rel="stylesheet');
 
 .search_query {
   padding-right: 10px;
   padding-left: 39px;
-  background: rgba(0,0,0,.13);
+  background: rgba(241, 238, 238,.13);
   font-weight: 400;
   line-height: inherit;
   font-size: 15px;
@@ -36,4 +29,16 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  font-family: 'PT Serif', serif;
+  font-size: 58px;
+  color: white;
+  font-weight: bold;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 3px;
 }

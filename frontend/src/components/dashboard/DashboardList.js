@@ -6,25 +6,26 @@ export const DashboardList = (props) => {
   let allInfo = props.allInfo.map((info, i) => {
     return(
       <>
+      <div className="wholeDashboard">
 
-      <div>
-        <img src={info.pic_url} alt="" className="profilePic"/>
+      <div className="profilePicCont">
+        <img src={info.pic_url} alt="" class="actualProfilePic"/>
       </div>
 
-      <div className="wholepost">
       <div className="usernameCont">
         <li className="username">{info.username}</li>
       </div>
-      <div>
-        <img src={info.url} alt="" className="post"/>
+      <div className="postCont">
+        <img src={info.url} alt="" className="actualPost"/>
       </div>
       <div className="bodyCont">
         <li className="body">{info.body}</li>
+      <div className="likes">
       </div>
       </div>
 
+      </div>
 
-      <br/>
       <br/>
       </>
     )

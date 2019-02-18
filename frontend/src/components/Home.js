@@ -11,13 +11,16 @@ class Home extends React.Component{
       <div className="wholething">
 
       <div className="greeting-container">
+
       <div className="greeting1">
         <h1>stumblr</h1>
       </div>
+
       <div className="greeting2">
         <p>Come for what you love.</p>
         <p>Stay for what you discover.</p>
       </div>
+
       <Link to="/dashboard"><button className="button">Get Started</button></Link>
       </div>
 
