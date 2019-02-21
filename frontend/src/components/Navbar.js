@@ -4,11 +4,12 @@ import './css/Navbar.css';
 
 let homeIcon = require('./white_home.png')
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   return(
     <>
+    
       <nav className="navbar">
-      
+
         <NavLink to={"/"} className="navlink">s</NavLink>
 
         <input type="text" name="search" placeholder="Search Stumblr" value="" className="search_query"/>

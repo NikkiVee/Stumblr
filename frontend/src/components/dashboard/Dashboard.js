@@ -27,7 +27,8 @@ class Dashboard extends React.Component{
   render() {
     return (
       <>
-      <DashboardList allInfo={this.state.allInfo}/>
+      <DashboardList
+        allInfo={this.state.allInfo}/>
       </>
     )
   }
