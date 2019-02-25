@@ -1,0 +1,19 @@
+.inputbox {
+  height: 52px;
+  width: 315px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.inputbox:focus {
+  height: 52px;
+  width: 315px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  color: black;
+}

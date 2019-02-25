@@ -1,6 +1,6 @@
 const passport = require('passport');
 const pgp = require('pg-promise')({});
-const connectionString = 'postgres://localhost/userlist';
+const connectionString = 'postgres://localhost/stumblr';
 const db = pgp(connectionString);
 
 module.exports = () => {

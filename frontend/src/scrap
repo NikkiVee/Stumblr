@@ -38,3 +38,32 @@ class Dashboard extends React.Component{
     );
   }
 }
+
+/* .recBlogs {
+  color: white;
+  grid-column: 3;
+  grid-row: 1 / 3;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin-left: 16px
+}
+
+.lifeImg {
+  height: 33px
+}
+
+.lifeText {
+
+} */
+
+/*
+      <div className="recBlogs">
+        <li>Recommended Blogs</li>
+        <li className="lifeText">
+        <img src="https://66.media.tumblr.com/avatar_c1cd55ae1202_128.pnj"
+            alt=""
+            className="lifeImg"/>life</li>
+        <li>frank ocean</li>
+        <li>70 Sci-Fi Art</li>
+        <li>Above the sky</li>
+      </div> */

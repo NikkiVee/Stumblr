@@ -1,5 +1,5 @@
 const { db } = require('../index.js');
-const authHelpers = require('../auth/helpers');
+const authHelpers = require('../../auth/helpers');
 
 const getAllUsers = (req, res, next) => {
   db.any('SELECT * FROM users')
@@ -41,6 +41,7 @@ function createUser(req, res, next) {
     });
   })
   .catch(err => {
+    console.log('this is an error', err);
     res.status(500).json({
       message: err,
     });

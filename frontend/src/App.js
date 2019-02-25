@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import Home from './components/Home';
+import Auth from './components/auth/Auth';
 import Dashboard from './components/dashboard/Dashboard.js';
-import Profile from './components/Profile';
+import './App.css';
 
 class App extends Component {
   render() {
@@ -16,9 +15,9 @@ class App extends Component {
 
         <Switch>
 
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" component={Auth}/>
           <Route path="/dashboard" component={Dashboard}/>
-          <Route path="/profile" component={Profile}/>
+
         </Switch>
 
       </div>
