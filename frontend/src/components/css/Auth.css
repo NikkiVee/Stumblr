@@ -33,15 +33,20 @@ p {
 }
 
 .cornerbutton1 {
-  height: 12px;
-  width: 315px;
-  font-size: 15px;
+  height: 34px;
+  width: 35;
+  font-size: 13px;
   font-weight: bold;
-  border-radius: 4px;
-  border: 2px solid #00b8ff;
-  color: white;
-  background-color: #00b8ff;
+  border-radius: 3px;
+  border: 2px solid #FFFFFF;
+  color: #444444;
+  background-color: #FFFFFF;
   margin-top: 10px;
+  font-family: Helvetica;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 23px;
 }
 
 .button2 {
@@ -55,8 +60,8 @@ p {
   background-color: #FFFFFF;
 }
 
-.cornerbutton2 {
-  height: 12px;
+.button3 {
+  height: 52px;
   width: 315px;
   font-size: 15px;
   font-weight: bold;
@@ -64,13 +69,29 @@ p {
   border: 2px solid #00b8ff;
   color: white;
   background-color: #00b8ff;
+}
+
+.cornerbutton2 {
+  height: 34px;
+  width: 35;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 2px solid #FFFFFF;
+  color: #444444;
+  background-color: #FFFFFF;
   margin-top: 10px;
+  font-family: Helvetica;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 23px;
 }
 
 .greeting-container {
   position: relative;
   top: 50%;
-  padding-top: 214px;
+  padding-top: 180px;
 }
 
 .background {

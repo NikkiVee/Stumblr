@@ -19,7 +19,7 @@ const Register = ({ username, password, openForm, handleSignup, handleChange, si
         />
         <br/>
         <input
-          className="inputbox"
+          className="inputbox2"
           required
           value={password}
           name='password'

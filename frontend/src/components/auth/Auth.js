@@ -12,8 +12,8 @@ class Auth extends React.Component{
     this.state = {
       loginDisplay: false,
       signupDisplay: false,
-      buttonDisplay: true,
-      buttonDisplay2: true,
+      buttonDisplay: false,
+      buttonDisplay2: false,
       username: '',
       password: '',
     };
@@ -51,21 +51,15 @@ class Auth extends React.Component{
 
   openForm = (e) => {
     this.setState({
-      [e.target.name]: true,
+      signupDisplay: !this.state.signupDisplay,
+      buttonDisplay: !this.state.buttonDisplay,
     });
-    this.handleButtonDisplay();
   };
 
   openForm2 = (e) => {
     this.setState({
-      [e.target.name]: true,
-    });
-    this.handleButtonDisplay2();
-  };
-
-  closeForm = (e) => {
-    this.setState({
-      [e.target.name]: false,
+      loginDisplay: !this.state.loginDisplay,
+      buttonDisplay2: !this.state.buttonDisplay2,
     });
   };
 
@@ -74,22 +68,6 @@ class Auth extends React.Component{
       [e.target.name]: e.target.value,
     });
   };
-
-  handleButtonDisplay = (e) => {
-      this.setState((prevState) => {
-        return {
-          buttonDisplay: !prevState.buttonDisplay,
-        };
-      });
-    };
-
-  handleButtonDisplay2 = (e) => {
-      this.setState((prevState) => {
-        return {
-          buttonDisplay2: !prevState.buttonDisplay2,
-        };
-      });
-    };
 
   render() {
 
@@ -114,25 +92,22 @@ class Auth extends React.Component{
           username={this.state.username}
           password={this.state.password}
           signupDisplay={this.state.signupDisplay}
-          openForm={this.openForm}
           handleSignup={this.handleSignup}
           handleChange={this.handleChange}/>
         <button
-          className={this.state.buttonDisplay2 ? 'button1' : 'cornerbutton2'}
+          className={this.state.buttonDisplay2 ? 'cornerbutton2' : 'button1'}
           name="signupDisplay"
-          onClick={this.openForm}>Get Started
+          onClick={this.openForm}>{this.state.buttonDisplay ? 'Sign Up' : 'Get Started'}
         </button>
-        <br/>
         <br/>
       <Login
         username={this.state.username}
         password={this.state.password}
         loginDisplay={this.state.loginDisplay}
-        openForm2={this.openForm2}
         handleLogin={this.handleLogin}
         handleChange={this.handleChange}/>
       <button
-        className={this.state.buttonDisplay ? 'button2' : 'cornerbutton1'}
+        className={this.state.buttonDisplay ? 'cornerbutton1' : 'button2'}
         name="loginDisplay"
         onClick={this.openForm2}>Log In
       </button>

@@ -1,8 +1,8 @@
 .inputbox {
   height: 52px;
   width: 315px;
-  font-size: 15px;
-  border-radius: 4px;
+  font-size: 16px;
+  border-radius: 4px 4px 0px 0px;
   border: 2px solid #FFFFFF;
   background-color: #FFFFFF;
   color: black;
@@ -11,8 +11,28 @@
 .inputbox:focus {
   height: 52px;
   width: 315px;
-  font-size: 15px;
-  border-radius: 4px;
+  font-size: 16px;
+  border-radius: 4px 4px 0px 0px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.inputbox2 {
+  height: 52px;
+  width: 315px;
+  font-size: 16px;
+  border-radius: 0px 0px 4px 4px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.inputbox2:focus {
+  height: 52px;
+  width: 315px;
+  font-size: 16px;
+  border-radius: 0px 0px 4px 4px;
   border: 2px solid #FFFFFF;
   background-color: #FFFFFF;
   color: black;

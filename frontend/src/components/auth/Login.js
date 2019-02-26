@@ -19,7 +19,7 @@ const Login = ({ username, password, handleLogin, handleChange, loginDisplay }) 
         />
         <br/>
         <input
-          className="inputbox"
+          className="inputbox2"
           required
           value={password}
           name='password'
@@ -30,7 +30,7 @@ const Login = ({ username, password, handleLogin, handleChange, loginDisplay }) 
       </form>
 
       : null}
-
+      <br/>
     </>
   );
 };
