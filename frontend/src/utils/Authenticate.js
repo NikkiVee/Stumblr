@@ -1,4 +1,4 @@
-const Auth = {
+const Authenticate = {
   authenticateUser: token => {
     localStorage.setItem('token', token);
   },
@@ -16,4 +16,4 @@ const Auth = {
   },
 };
 
-export default Auth;
+export default Authenticate;

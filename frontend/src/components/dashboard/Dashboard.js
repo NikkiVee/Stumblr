@@ -1,9 +1,6 @@
 import React from 'react';
 import '../css/Dashboard.css';
 import axios from 'axios'
-import AuthForm from "../../login/AuthForm";
-import Auth from "../../utils/Auth";
-import PrivateRoute from "../../utils/AuthRouting";
 import { DashboardList } from './DashboardList'
 
 
@@ -12,14 +9,12 @@ class Dashboard extends React.Component{
     super()
     this.state = {
       allInfo: [],
-      isLoggedIn: false,
       user: []
     }
   }
 
   componentDidMount() {
       this.getDashboardInfo();
-      this.checkAuthenticateStatus();
     }
 
   getDashboardInfo = () => {
@@ -29,37 +24,12 @@ class Dashboard extends React.Component{
     })
   }
 
-  checkAuthenticateStatus = () => {
-      axios.get("/users/isLoggedIn").then(user => {
-        if (user.data.username === Auth.getToken()) {
-          this.setState({
-            isLoggedIn: Auth.isUserAuthenticated(),
-            username: Auth.getToken()
-          })
-        } else {
-          if (user.data.username) {
-            this.logoutUser();
-          } else {
-            Auth.deauthenticateUser();
-          }
-        }
-      })
-    }
-
-    logoutUser = () => {
-      axios
-        .post("/users/logout")
-        .then(() => {
-          Auth.deauthenticateUser();
-        })
-        .then(() => {
-          this.checkAuthenticateStatus();
-        })
-    }
-
   render() {
     return (
       <>
+
+      <button className="logout">Log Out</button>
+
       <DashboardList
         allInfo={this.state.allInfo}/>
       </>

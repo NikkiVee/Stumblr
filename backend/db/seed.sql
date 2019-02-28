@@ -6,7 +6,7 @@ CREATE DATABASE stumblr;
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   username VARCHAR NOT NULL UNIQUE,
-  email VARCHAR NOT NULL,
+  email VARCHAR,
   pic_url VARCHAR,
   background VARCHAR,
   title VARCHAR,

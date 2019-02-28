@@ -28,12 +28,10 @@ const getSingleUser = (req, res, next) => {
 function createUser(req, res, next) {
   const hash = authHelpers.createHash(req.body.password);
 
-  db.none('INSERT INTO users (username, email, pic_url, password_digest) VALUES (${username}, ${email}, ${pic_url}, ${password_digest})',
+  db.none('INSERT INTO users (username, password_digest) VALUES (${username}, ${password})',
   {
     username: req.body.username,
-    email: req.body.email,
-    pic_url: req.body.pic_url,
-    password_digest: hash,
+    password: hash,
   })
   .then(() => {
     res.status(200).json({

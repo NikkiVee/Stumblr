@@ -1,16 +1,14 @@
 import React from 'react';
-import '../css/Login.css'
+import '../css/Register.css'
 
-const Login = ({ username, password, handleLogin, handleChange, loginDisplay }) => {
+const Register = ({ username, password, openForm, registerUser, handleChange, signupDisplay, buttonDisplay }) => {
   return (
     <>
 
-    { loginDisplay ?
-
-      <form onSubmit={handleLogin}>
+      <form onSubmit={registerUser}>
         <input
-          className="inputbox"
           required
+          className="inputbox"
           value={username}
           name='username'
           type='text'
@@ -19,20 +17,21 @@ const Login = ({ username, password, handleLogin, handleChange, loginDisplay }) 
         />
         <br/>
         <input
-          className="inputbox2"
           required
+          className="inputbox2"
           value={password}
           name='password'
           type='password'
           placeholder="Password"
           onChange={handleChange}
         />
-      </form>
+        <br/>
+        <button type="submit"
+                className='button1'>Sign Up</button>
+        </form>
 
-      : null}
-      <br/>
     </>
   );
-};
+}
 
-export default Login;
+export default Register;
