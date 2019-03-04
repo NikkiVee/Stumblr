@@ -10,8 +10,8 @@ li {
 
 .wholeDashboard {
   display: grid;
-  grid-template-columns: 9% 72% 13%;
-  grid-auto-rows: 10% 90% 9%;
+  grid-template-columns: 10% 75% 13%;
+  grid-auto-rows: 10% 93% 13%;
   margin: auto;
   width: 726px;
   height: auto;
@@ -53,11 +53,12 @@ li {
 .postCont {
   grid-column: 2;
   grid-row: 2 / 3;
-  height: 445px;
+  height: 500px;
+  background-color: white;
 }
 
 .actualPost {
-  width: 100%;
+  width: 410px;
   height: 100%;
 }
 
@@ -77,6 +78,7 @@ li {
   display: flex;
   padding-top: 10px;
   padding-left: 18px;
+  margin-top: 10px;
   height: 1px;
   padding-bottom: 15px;
   font-size: 13px;
@@ -84,21 +86,4 @@ li {
 
 .likes {
   background-color: white;
-}
-
-.logout {
-  height: 34px;
-  width: 35;
-  font-size: 13px;
-  font-weight: bold;
-  border-radius: 3px;
-  border: 2px solid #FFFFFF;
-  color: #444444;
-  background-color: #FFFFFF;
-  margin-top: 10px;
-  font-family: Helvetica;
-  position: fixed;
-  right: 0;
-  top: 0;
-  margin-right: 23px;
 }

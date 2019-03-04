@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import Authenticate from './utils/Authenticate';
+import PrivateRoute from './utils/AuthRouting';
+import axios from 'axios';
+import './App.css';
+
 import { Navbar } from './components/Navbar';
 import Auth from './components/authForms/Auth';
-import Dashboard from './components/dashboard/Dashboard.js';
-import './App.css';
-import axios from 'axios'
-import Authenticate from './utils/Authenticate'
+import Dashboard from './components/dashboard/Dashboard';
+import UserProfile from './components/profile/UserProfile';
 
 class App extends Component {
   state = {
@@ -35,7 +38,6 @@ class App extends Component {
     });
   };
 
-
   logoutUser = () => {
     axios
       .post('/users/logout')
@@ -48,23 +50,23 @@ class App extends Component {
   };
 
   render() {
+    const {isLoggedIn} = this.state
     return (
       <>
       <BrowserRouter>
       <div className="App">
-        <Route component={Navbar} />
+        <Route render={() => <Navbar isLoggedIn={isLoggedIn}
+        logoutUser={this.logoutUser}  /> } />
 
         <Switch>
 
-          <Route exact path="/" render={() => {
-            if (this.state.isLoggedIn) {
-              return <Redirect to='/dashboard' />
-            } else {
-              return <Auth />
-            }
-          }}/>
+          <Route exact path="/" render={() => isLoggedIn ? <Dashboard /> : <Auth
+            isLoggedIn={isLoggedIn} checkAuthenticateStatus={this.checkAuthenticateStatus} />
+          }/>
 
-          <Route path="/dashboard" component={Dashboard}/>
+          <Route path="/dashboard" render={() => <Dashboard/>}/>
+
+          <PrivateRoute path="/dashboard/user" component={UserProfile} logoutUser={this.logoutUser}/>
 
         </Switch>
 

@@ -30,6 +30,7 @@ p {
   color: white;
   background-color: #00b8ff;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .cornerbutton1 {
@@ -100,5 +101,5 @@ p {
   position: absolute;
   top: 0;
   z-index: -1;
-  background-image: url("../background_img/9.png");
+  background-image: url('../background_img/18.jpg');
 }

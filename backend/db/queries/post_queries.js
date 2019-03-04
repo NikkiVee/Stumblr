@@ -64,4 +64,16 @@ const dashboardInfo = (req, res, next) => {
   .catch(err => next(err));
 };
 
-module.exports = { createPost, deletePost, editPost, getAllPosts, dashboardInfo };
+const profileInfo = (req, res, next) => {
+  db.any('SELECT body, username, user_id, url, type, pic_url, background FROM posts JOIN users ON posts.user_id = users.id')
+  .then(data => {
+    res.status(200).json({
+      status: 'success',
+      data: data,
+      message: 'Received all Info',
+    });
+  })
+  .catch(err => next(err));
+};
+
+module.exports = { createPost, deletePost, editPost, getAllPosts, dashboardInfo, profileInfo };

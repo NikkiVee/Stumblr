@@ -42,3 +42,21 @@ input:focus {
   padding-left: 15px;
   padding-bottom: 3px;
 }
+
+.logout {
+  height: 34px;
+  width: 35;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 2px solid #FFFFFF;
+  color: #444444;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  font-family: Helvetica;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 21px;
+  margin-top: 25px;
+} 

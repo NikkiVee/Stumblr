@@ -24,12 +24,10 @@ class Dashboard extends React.Component{
     })
   }
 
+
   render() {
     return (
       <>
-
-      <button className="logout">Log Out</button>
-
       <DashboardList
         allInfo={this.state.allInfo}/>
       </>

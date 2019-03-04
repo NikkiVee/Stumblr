@@ -8,27 +8,28 @@ const Register = ({ username, password, openForm, registerUser, handleChange, si
       <form onSubmit={registerUser}>
         <input
           required
-          className="inputbox"
+          className='inputbox'
           value={username}
           name='username'
           type='text'
-          placeholder="Username"
+          placeholder='Username'
           onChange={handleChange}
         />
         <br/>
         <input
           required
-          className="inputbox2"
+          className='inputbox2'
           value={password}
           name='password'
           type='password'
-          placeholder="Password"
+          placeholder='Password'
           onChange={handleChange}
         />
         <br/>
-        <button type="submit"
-                className='button1'>Sign Up</button>
-        </form>
+        <button type='submit'
+                className='button1'>Sign Up
+        </button>
+      </form>
 
     </>
   );

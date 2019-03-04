@@ -11,36 +11,18 @@ class Auth extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: false,
       loginDisplay: false,
       signupDisplay: false,
       buttonDisplay: false,
-      buttonDisplay2: false,
       username: '',
       password: '',
     };
   }
 
   componentDidMount() {
-    this.checkAuthenticateStatus();
+    this.props.checkAuthenticateStatus();
   }
 
-  checkAuthenticateStatus = () => {
-    axios.post('/users/isLoggedIn').then(user => {
-      if (user.data.username === Authenticate.getToken()) {
-        this.setState({
-          isLoggedIn: Authenticate.isUserAuthenticated(),
-          username: Authenticate.getToken(),
-        });
-      } else {
-        if (user.data.username) {
-          this.logoutUser();
-        } else {
-          Authenticate.deauthenticateUser();
-        }
-      }
-    });
-  };
 
   registerUser = async e => {
     e.preventDefault();
@@ -51,7 +33,7 @@ class Auth extends React.Component{
     Authenticate.authenticateUser(username);
 
     await axios.post('/users/login', { username, password });
-    await this.checkAuthenticateStatus();
+    await this.props.checkAuthenticateStatus();
 
     this.setState({
       username: '',
@@ -69,7 +51,7 @@ class Auth extends React.Component{
         Authenticate.authenticateUser(username);
       })
       .then(() => {
-        this.checkAuthenticateStatus();
+        this.props.checkAuthenticateStatus();
       })
       .then(() => {
         this.setState({
@@ -86,7 +68,7 @@ class Auth extends React.Component{
         Authenticate.deauthenticateUser();
       })
       .then(() => {
-        this.checkAuthenticateStatus();
+        this.props.checkAuthenticateStatus();
       });
   };
 
@@ -100,7 +82,7 @@ class Auth extends React.Component{
       Authenticate.authenticateUser(username);
 
       await axios.post('/users/login', { username, password });
-      await this.checkAuthenticateStatus();
+      await this.props.checkAuthenticateStatus();
 
       this.setState({
         username: '',
@@ -109,8 +91,8 @@ class Auth extends React.Component{
 
     } else {
       this.setState({
-        signupDisplay: !this.state.signupDisplay,
-        buttonDisplay2: !this.state.buttonDisplay2,
+        buttonDisplay: !this.state.buttonDisplay,
+        signupDisplay: !this.state.signupDisplay
       });
     }
   };
@@ -125,7 +107,7 @@ class Auth extends React.Component{
           Authenticate.authenticateUser(username);
         })
         .then(() => {
-          this.checkAuthenticateStatus();
+          this.props.checkAuthenticateStatus();
         })
         .then(() => {
           this.setState({
@@ -136,8 +118,8 @@ class Auth extends React.Component{
 
     } else {
       this.setState({
-        loginDisplay: !this.state.loginDisplay,
         buttonDisplay: !this.state.buttonDisplay,
+        loginDisplay: !this.state.loginDisplay
       });
     }
   };
@@ -149,7 +131,7 @@ class Auth extends React.Component{
   };
 
   render() {
-    if (this.state.isLoggedIn) {
+    if (this.props.isLoggedIn) {
       return <Redirect to='/dashboard' />;
     }
 
@@ -169,6 +151,23 @@ class Auth extends React.Component{
               <p>Stay for what you discover.</p>
             </div>
 
+            {this.state.buttonDisplay ?
+            null
+            :
+            <>
+            <button
+              className='button1'
+              name="signupDisplay"
+              onClick={this.openForm}>
+              Get Started
+            </button>
+            <br/>
+            <button
+                className='button2'
+                name="loginDisplay"
+                onClick={this.openForm2}>Log In
+              </button>
+            </>}
 
             {this.state.signupDisplay ?
               <Register
@@ -178,39 +177,20 @@ class Auth extends React.Component{
               registerUser={this.registerUser}
               handleChange={this.handleChange}
               openForm={this.openForm}
-              buttonDisplay={this.buttonDisplay}
-              buttonDisplay2={this.buttonDisplay2}/>
-            : null }
+              buttonDisplay={this.buttonDisplay}  buttonDisplay2={this.buttonDisplay2}/>
+            : null}
 
-            {this.state.buttonDisplay ?
-              null
-            : <button
-              className='button1'
-              name="signupDisplay"
-              onClick={this.openForm}>
-              Get Started
-            </button> }
-
-            <br/>
 
           {this.state.loginDisplay ?
-          <Login
-            username={this.state.username}
-            password={this.state.password}
-            loginDisplay={this.state.loginDisplay}
-            loginUser={this.loginUser}
-            handleChange={this.handleChange}
-            openForm2={this.openForm2}
-            buttonDisplay={this.buttonDisplay}/>
-          : null }
-
-          {this.state.buttonDisplay ?
-            null
-          : <button
-              className='button2'
-              name="loginDisplay"
-              onClick={this.openForm2}>Log In
-            </button> }
+            <Login
+              username={this.state.username}
+              password={this.state.password}
+              loginDisplay={this.state.loginDisplay}
+              loginUser={this.loginUser}
+              handleChange={this.handleChange}
+              openForm2={this.openForm2}
+              buttonDisplay={this.buttonDisplay}/>
+          : null}
 
           </div>
         </div>
