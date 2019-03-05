@@ -60,13 +60,13 @@ class App extends Component {
 
         <Switch>
 
-          <Route exact path="/" render={() => isLoggedIn ? <Dashboard /> : <Auth
+          <PrivateRoute path="/dashboard" component={Dashboard}/>
+
+          <PrivateRoute path="/users/:id" component={UserProfile} logoutUser={this.logoutUser}/>
+
+          <Route path="/" render={() => isLoggedIn ? <Redirect to="/dashboard" /> : <Auth
             isLoggedIn={isLoggedIn} checkAuthenticateStatus={this.checkAuthenticateStatus} />
           }/>
-
-          <Route path="/dashboard" render={() => <Dashboard/>}/>
-
-          <PrivateRoute path="/dashboard/user" component={UserProfile} logoutUser={this.logoutUser}/>
 
         </Switch>
 

@@ -25,6 +25,7 @@ class UserProfile extends React.Component{
 
 
   render() {
+    console.log('PROPS ID', this.props)
     return (
       <>
       <ProfileList

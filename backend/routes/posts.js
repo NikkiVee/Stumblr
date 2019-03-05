@@ -7,6 +7,6 @@ router.delete('/:id', deletePost);
 router.patch('/:id', editPost);
 router.get('/', getAllPosts);
 router.get('/dashboardInfo', dashboardInfo);
-router.get('/profileInfo', dashboardInfo);
+router.get('/profileInfo/:id', profileInfo);
 
 module.exports = router;

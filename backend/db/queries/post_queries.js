@@ -24,13 +24,7 @@ const deletePost = (req, res, next) => {
 };
 
 const editPost = (req, res, next) => {
-  db.none('UPDATE posts SET user_id=${user_id}, type=${type}, body=${body}, url=${url} WHERE id=${id}', {
-    id: parseInt(req.params.id),
-    user_id: req.body.user_id,
-    type: req.body.type,
-    body: req.body.body,
-    url: req.body.url,
-  })
+  db.none('UPDATE posts SET user_id=${user_id}, type=${type}, body=${body}, url=${url} WHERE id=${id}', [user_id])
   .then(() => {
     res.status(200).json({
       status: 'success',
@@ -65,7 +59,9 @@ const dashboardInfo = (req, res, next) => {
 };
 
 const profileInfo = (req, res, next) => {
-  db.any('SELECT body, username, user_id, url, type, pic_url, background FROM posts JOIN users ON posts.user_id = users.id')
+  [Number(req.params.id)];
+  db.any('SELECT body, username, user_id, url, type, pic_url FROM posts JOIN users ON posts.user_id=users.id WHERE posts.user_id=$1',
+  [Number(req.params.id)])
   .then(data => {
     res.status(200).json({
       status: 'success',

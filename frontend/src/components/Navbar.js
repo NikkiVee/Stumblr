@@ -23,8 +23,9 @@ export const Navbar = (props) => {
             <button onClick={logoutUser}
                     className="logout">Log out
             </button>
-
+        
           </nav>
+
           :
           <nav className="navbar">
 
