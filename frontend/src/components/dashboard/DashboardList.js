@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../css/Dashboard.css';
 
 export const DashboardList = (props) => {
@@ -7,9 +8,11 @@ export const DashboardList = (props) => {
       <div key={i} className="DashboardList">
         <div className="wholeDashboard">
 
+          <Link to={`/users/${info.user_id}`}>
           <div className="profilePicCont">
             <img src={info.pic_url} alt="" className="actualProfilePic"/>
           </div>
+          </Link>
 
           <div className="usernameCont">
             <li className="username">{info.username}</li>

@@ -60,7 +60,7 @@ const dashboardInfo = (req, res, next) => {
 
 const profileInfo = (req, res, next) => {
   [Number(req.params.id)];
-  db.any('SELECT body, username, user_id, url, type, pic_url FROM posts JOIN users ON posts.user_id=users.id WHERE posts.user_id=$1',
+  db.any('SELECT body, username, user_id, url, background, type, pic_url FROM posts JOIN users ON posts.user_id=users.id WHERE posts.user_id=$1',
   [Number(req.params.id)])
   .then(data => {
     res.status(200).json({

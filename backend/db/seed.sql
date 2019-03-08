@@ -38,17 +38,17 @@ CREATE TABLE comments (
 );
 
 INSERT INTO users (username, email, pic_url, background, title, description, password_digest)
-VALUES ('drex','drex@gmail.com', 'https://66.media.tumblr.com/avatar_adb0efbec3fe_64.pnj', null, null, null , '1234'), ('hoodwitch','hoodwitch@gmail.com', 'https://66.media.tumblr.com/avatar_66e7ec8c903f_128.pnj', null, null, null, '1234'),
-('renhang','renhang@gmail.com', 'http://i44.photobucket.com/albums/f6/nicollevee/renicon_zpsrcligxdu.jpg?t=1551378268', null, null, null, '1234'),
-('dragme','dragme@gmail.com', 'https://66.media.tumblr.com/avatar_1fced9b5ff2b_128.pnj', null, null, null, '1234');
+VALUES ('drex','drex@gmail.com', 'https://66.media.tumblr.com/avatar_adb0efbec3fe_64.pnj', 'http://www.lovethesepics.com/wp-content/uploads/2012/01/Why-fear-the-Chinese-Red-dragon.jpg', null, null , '1234'), ('hoodwitch','hoodwitch@gmail.com', 'https://66.media.tumblr.com/avatar_66e7ec8c903f_128.pnj', 'https://previews.123rf.com/images/pilens/pilens1708/pilens170800031/84808185-nature-texture-pattern-of-nacre-mother-of-pearl-inner-side-of-paua-perlemoen-or-abalone-shell-macro-.jpg', null, null, '1234'),
+('renhang','renhang@gmail.com', 'http://i44.photobucket.com/albums/f6/nicollevee/renicon_zpsrcligxdu.jpg?t=1551378268', 'https://blog.quantum.com/wp-content/uploads/Blue_Clouds.jpg', null, null, '1234'),
+('dragme','dragme@gmail.com', 'https://66.media.tumblr.com/avatar_1fced9b5ff2b_128.pnj', 'https://scstylecaster.files.wordpress.com/2016/05/light-pink-lipsticks-feat.jpg', null, null, '1234');
 
 INSERT INTO posts (user_id, type, body, url)
 VALUES (1, 'gif', 'Lissette…', 'https://66.media.tumblr.com/33c6036d5c2fe5596474d0f87f6a4559/tumblr_p2cv20bFh91s8okido1_640.gif'),
-(2, 'img', null, 'http://static1.squarespace.com/static/53d5b207e4b0125510c263aa/t/5c51f09a898583aa2a5c7ff6/1548873904975/IMG_6842.JPG?format=500w'),
+(2, 'img', null, 'http://static1.squarespace.com/static/53d5b207e4b0125510c263aa/t/5c65c76de79c70730e5db3be/1550174068951/image5.jpeg?format=500w'),
 (3, 'img', null, 'https://i.pinimg.com/originals/2b/41/e8/2b41e85bf69c95e9865b313bfa4921ea.jpg'),
 (4, 'img', 'Monét X Change', 'https://66.media.tumblr.com/940431cfe4d0bf3dce8d1093bc783d5d/tumblr_plx3u20xjp1u2vnvw_1280.jpg'),
 (1, 'gif', null, 'https://66.media.tumblr.com/a21b529542ed1f0dcad97d6a8b315bac/tumblr_oxvpncYozE1s8okido1_640.gif'),
-(2, 'img', null, 'http://static1.squarespace.com/static/53d5b207e4b0125510c263aa/t/5c65c76de79c70730e5db3be/1550174068951/image5.jpeg?format=500w'),
+(2, 'img', null, 'http://static1.squarespace.com/static/53d5b207e4b0125510c263aa/t/5c51f09a898583aa2a5c7ff6/1548873904975/IMG_6842.JPG?format=500w'),
 (3, 'img', null, 'https://www.joseph-fashion.com/on/demandware.static/-/Sites-Joseph-Library/default/dw2fcc9694/joseph-curates/ren/2017_04_05_REN_HANG_Mobile_8.jpg'),
 (4, 'img', null, 'https://66.media.tumblr.com/8e9628c5a2c381da161b2b30262cd6e1/tumblr_plx3u0d2hR1u2vnvw_1280.jpg'),
 (1, 'gif', null, 'https://66.media.tumblr.com/ad6a61d3ef562bc66856e462969354eb/tumblr_onzzqs5lKz1s8okido1_640.gif'),

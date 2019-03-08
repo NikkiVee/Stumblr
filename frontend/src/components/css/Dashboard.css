@@ -11,13 +11,13 @@ li {
 .wholeDashboard {
   display: grid;
   grid-template-columns: 10% 75% 13%;
-  grid-auto-rows: 10% 93% 13%;
+  grid-auto-rows: 10% 93% 8%;
   margin: auto;
   width: 726px;
   height: auto;
   grid-column-gap: 23px;
-  padding-top: 33px;
-  padding-right: 230px;
+  padding-top: 115px;
+  padding-right: 40px;
 }
 
 .profilePicCont {
@@ -76,11 +76,8 @@ li {
   font-family: 'Open Sans', sans-serif;
   background: #FFFFFF;
   display: flex;
-  padding-top: 10px;
   padding-left: 18px;
-  margin-top: 10px;
   height: 1px;
-  padding-bottom: 15px;
   font-size: 13px;
 }
 

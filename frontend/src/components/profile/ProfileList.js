@@ -1,36 +1,26 @@
 import React from 'react'
+import '../css/Profile.css';
 
 export const ProfileList = (props) => {
-  console.log("Hello", props)
-  // let profileInfo = props.profileInfo.map((info, i) => {
-  //   return(
-  //     <>
-  //       Hello
-  //     </>
-      // <div key={i} className="ProfileList">
-      //   <div className="wholeProfile">
-      //
-      //     <div className="background">
-      //       <img src={info.background} alt="" className="actualBackground"/>
-      //     </div>
-      //     <div className="profilePic">
-      //       <img src={info.pic_url} alt="" className="actualProfilePic"/>
-      //     </div>
-      //     <div className="postCont">
-      //       <img src={info.url} alt="" className="actualPost"/>
-      //     </div>
-      //
-      //     <div className="bodyCont">
-      //       <li className="body">{info.body}</li>
-      //     </div>
-      //
-      //   </div>
-      // </div>
-  //   )
-  // })
+  if (!props.profileInfo) return null
+  let profileInfo = props.profileInfo.map((info, i) => {
+    return(
+      <div key={i} className="ProfileList">
+        <div className="wholeProfile">
+
+          <div className="postContainter">
+            <img src={info.url} alt="" className="post"/>
+          </div>
+          <br/>
+          
+        </div>
+      </div>
+
+    )
+  })
   return (
     <>
-      <h1>Hello</h1>
+      {profileInfo}
     </>
   )
 }

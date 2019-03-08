@@ -3,12 +3,12 @@
 .search_query {
   padding-right: 10px;
   padding-left: 39px;
-  background: rgba(241, 238, 238,.13);
+  background: rgba(241, 238, 238,.6);
   font-weight: 400;
   line-height: inherit;
   font-size: 15px;
   height: 31px;
-  width: 34%;
+  width: 401px;
   border: 2px white;
   border-radius: 3px;
   margin-top: 10px;
@@ -33,6 +33,10 @@ input:focus {
   font-size: 58px;
   color: white;
   font-weight: bold;
+  z-index: 2;
+  position: fixed;
+  background: rgba(241, 238, 238,0.1);
+  width: -webkit-fill-available;
 }
 
 .navlink {
@@ -41,6 +45,12 @@ input:focus {
   padding-right: 15px;
   padding-left: 15px;
   padding-bottom: 3px;
+}
+
+.profileIcon {
+  margin-left: 770px;
+  margin-top: 18px;
+  height: 54px;
 }
 
 .logout {
@@ -59,4 +69,4 @@ input:focus {
   top: 0;
   margin-right: 21px;
   margin-top: 25px;
-} 
+}

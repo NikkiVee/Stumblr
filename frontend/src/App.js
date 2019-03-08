@@ -14,7 +14,7 @@ class App extends Component {
   state = {
     isLoggedIn: false,
     username: '',
-    password: ''
+    password: '',
   }
 
   componentDidMount() {
@@ -60,12 +60,16 @@ class App extends Component {
 
         <Switch>
 
-          <PrivateRoute path="/dashboard" component={Dashboard}/>
+          <PrivateRoute path="/dashboard"
+                        component={Dashboard}/>
 
-          <PrivateRoute path="/users/:id" component={UserProfile} logoutUser={this.logoutUser}/>
+          <PrivateRoute path="/users/:user_id"
+                        component={UserProfile} logoutUser={this.logoutUser}/>
 
-          <Route path="/" render={() => isLoggedIn ? <Redirect to="/dashboard" /> : <Auth
-            isLoggedIn={isLoggedIn} checkAuthenticateStatus={this.checkAuthenticateStatus} />
+          <Route path="/" render={() => isLoggedIn ?
+          <Redirect to="/dashboard" /> :
+          <Auth isLoggedIn={isLoggedIn}
+                checkAuthenticateStatus={this.checkAuthenticateStatus} />
           }/>
 
         </Switch>
